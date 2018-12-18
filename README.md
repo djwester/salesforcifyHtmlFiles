@@ -29,7 +29,9 @@ Once you have uninstalled it, you can just run the installer again to get the la
 # Making Changes
 If you want to make changes you can edit the python file. There are no tests, so you will just have to manually run the file to test out your changes.
 
-Once you have made the changes you can rebuil the .msi and build by calling
+Once you have made the changes you can rebuil the .msi.
+
+To do this, first update the version number in the setup.py file and then build by calling
 
 ```
 python setup.py bdist_msi
