@@ -17,7 +17,7 @@ executables = [
 ]
 
 setup(name='salesforcifyHtmlFiles',
-      version='0.1',
+      version='0.2',
       description='converts html files output by flare into something ready to be embedded in salesforce',
       executables=executables
       )

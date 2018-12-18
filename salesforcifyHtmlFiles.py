@@ -37,14 +37,23 @@ parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-f' '--folder', dest='search_folder',
                    help='specify the folder containing the files to convert. The script will attempt to convert all .html files in this folder')
 
+def get_file_list(root_dir, filter_list=['.html','.htm']):
+    initial_files =  os.listdir(root_dir)
+    files = []
+    for each_filter in filter_list:
+        filtered_files = fnmatch.filter(initial_files, '*%s'%each_filter)
+        files += filtered_files
+
+    file_list = []
+    for filename in files:
+        file_list.append(os.path.join(root_dir, filename))
+
+    return file_list
+
 args = vars(parser.parse_args())
 root_dir = args['search_folder']
-# root_dir = r'C:\temp\convert_files'
-files =  os.listdir(root_dir)
-file_list = []
-for filename in fnmatch.filter(files, '*.html'):
-    file_list.append(os.path.join(root_dir, filename))
 
+file_list = get_file_list(root_dir,['.html','.htm'])
 
 for file in file_list:
     print ('converting %s...'%file)
