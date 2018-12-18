@@ -22,7 +22,7 @@ You can convert the files by calling the following on the command line
 assuming of course, that you have it installed in C:\Program Files
 
 ### Re-installing
-If you have already run the installer and there is a new update you would like to get you can uninstall the current version of salesforcifyHtmlFiles, but going to add/remove programs in the control panel and calling Right Click>Uninstall on the salesforcifyHtmlFiles program.
+If you have already run the installer and there is a new update you would like to get you can uninstall the current version of salesforcifyHtmlFiles, by going to add/remove programs in the control panel and calling Right Click>Uninstall on the salesforcifyHtmlFiles program.
 
 Once you have uninstalled it, you can just run the installer again to get the latest version
 
